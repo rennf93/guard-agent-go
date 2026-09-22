@@ -39,7 +39,10 @@ guard-agent-go/
 ├── version.go          # Version constant
 ├── *_test.go           # White-box tests in package guardagent
 ├── integration_test.go # Redis-backed tests behind the `integration` build tag
-└── mock_test.go        # httptest mock of the ingestion contract shared by all tests
+├── mock_test.go        # httptest mock of the ingestion contract shared by all tests
+├── examples/basic_usage/  # minimal wiring: engine OnBlock hook to agent events (main.go, README.md)
+├── mkdocs.yml          # mkdocs-material site definition (docs/ sources)
+└── docs/               # documentation site sources: index.md, usage.md, configuration.md
 ```
 
 Key invariants an agent must preserve when editing:
@@ -49,7 +52,7 @@ Key invariants an agent must preserve when editing:
 3. No exported method may panic out or block the host beyond the documented overflow policy; telemetry failures are logged and counted.
 4. Per-kind state (queues, failure streaks, backoff gates) stays independent: one kind failing must never stall the other.
 5. Redis failures are fail-open: log, count, keep going.
-6. Files under `.github/workflows/` are byte-identical to gin-guard's except the `MODULE` value in `release.yml`; do not diverge casually.
+6. Community workflows (`issue-link`, `stale`, `sync-labels`) stay byte-identical to the Go family's (gin-guard and siblings); `greetings`, `summary`, and `labeler`/`labels` carry repo-specific text (agent subsystems, not adapter middleware) and must not drift in structure.
 
 ## Quick Start
 
@@ -139,6 +142,7 @@ There is no Makefile. Every command below comes from the CI workflows or this fi
 | `go test ./...` | Unit tests |
 | `REDIS_HOST=127.0.0.1 go test -tags integration ./...` | Full suite incl. Redis-backed tests (skips without `REDIS_HOST`) |
 | `go install golang.org/x/vuln/cmd/govulncheck@latest && govulncheck ./...` | Vulnerability scan (must report zero) |
+| `pip install mkdocs-material && mkdocs build --strict` | Build the documentation site (CI deploys it on master) |
 
 On hosts without a Go toolchain, run the same commands in Docker: `docker run --rm -v "$PWD":/app -w /app -e GOTOOLCHAIN=auto golang:1.25-alpine sh -c "go test ./..."`, with a `redis:7-alpine` container on a shared Docker network (network alias `redis`, `REDIS_HOST=redis`) for the integration build.
 
