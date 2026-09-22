@@ -1,0 +1,56 @@
+"area: core":
+  - changed-files:
+      - any-glob-to-any-file:
+          - agent.go
+          - config.go
+          - models.go
+          - errors.go
+          - version.go
+
+"area: transport":
+  - changed-files:
+      - any-glob-to-any-file:
+          - transport.go
+          - signing.go
+
+"area: persistence":
+  - changed-files:
+      - any-glob-to-any-file:
+          - persistence.go
+          - circuit_breaker.go
+          - install_id.go
+
+tests:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/*_test.go'
+
+examples:
+  - changed-files:
+      - any-glob-to-any-file:
+          - examples/**
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - README.md
+          - AGENTS.md
+          - CLAUDE.md
+          - LICENSE
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file:
+          - .github/**
+
+build:
+  - changed-files:
+      - any-glob-to-any-file:
+          - go.mod
+          - go.sum
+
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file:
+          - go.mod
+          - go.sum
