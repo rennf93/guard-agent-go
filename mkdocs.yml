@@ -1,0 +1,26 @@
+site_name: guard-agent-go
+site_description: Go telemetry agent reporting to the Guard Core App ingestion API
+site_author: Renn F
+repo_url: https://github.com/rennf93/guard-agent-go
+repo_name: rennf93/guard-agent-go
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: amber
+  features:
+    - content.code.copy
+    - navigation.sections
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - tables
+
+nav:
+  - Home: index.md
+  - Usage: usage.md
+  - Configuration: configuration.md
