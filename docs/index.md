@@ -16,7 +16,7 @@ persisted install id.
 ## Installation
 
 ```bash
-go get github.com/rennf93/guard-agent-go
+go get github.com/rennf93/guard-agent-go/v3
 ```
 
 Requires Go 1.25 or later.
@@ -34,7 +34,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/rennf93/guard-agent-go"
+	"github.com/rennf93/guard-agent-go/v3"
 )
 
 func main() {

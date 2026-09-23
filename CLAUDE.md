@@ -5,8 +5,8 @@ Guidance for AI agents (including Claude Code) working in this repository.
 
 guard-agent-go is the Go telemetry agent for the Guard ecosystem. It is a framework-agnostic library (single package `guardagent` at the repo root) that buffers security events, metrics, and agent status in memory and ships them to the Guard Core App ingestion API with at-least-once delivery guarantees: nothing acknowledged is lost, nothing unacknowledged is forgotten.
 
-- **Module**: `github.com/rennf93/guard-agent-go`
-- **Import path**: `github.com/rennf93/guard-agent-go` (package `guardagent`)
+- **Module**: `github.com/rennf93/guard-agent-go/v3`
+- **Import path**: `github.com/rennf93/guard-agent-go/v3` (package `guardagent`)
 - **Go directive**: 1.25.0
 - **License**: MIT
 - **Release state**: no tag yet. Version `0.1.0` semantics are implemented and documented; releases are published as `v*` git tags when the maintainer cuts them. Until then pin a commit or track `main`.

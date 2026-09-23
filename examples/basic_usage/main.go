@@ -16,7 +16,7 @@ import (
 	"syscall"
 	"time"
 
-	guardagent "github.com/rennf93/guard-agent-go"
+	guardagent "github.com/rennf93/guard-agent-go/v3"
 	guardcore "github.com/rennf93/guard-core-go/guardcore"
 )
 
