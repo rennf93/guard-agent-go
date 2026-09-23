@@ -30,7 +30,7 @@ Ingestion contract: `POST /api/v1/events`, `/api/v1/metrics`, `/api/v1/status` w
 There is no release tag yet; pin a commit or track `main`:
 
 ```sh
-go get github.com/rennf93/guard-agent-go@main
+go get github.com/rennf93/guard-agent-go/v3@v3.0.2
 ```
 
 ## Setup

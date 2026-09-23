@@ -22,10 +22,10 @@ Implemented and functional. Version `0.1.0` semantics are complete and covered b
 ## Install
 
 ```sh
-go get github.com/rennf93/guard-agent-go@main
+go get github.com/rennf93/guard-agent-go/v3@v3.0.2
 ```
 
-Package name is `guardagent`; the module is `github.com/rennf93/guard-agent-go`.
+Package name is `guardagent`; the module is `github.com/rennf93/guard-agent-go/v3`.
 
 ## Usage
 
@@ -36,7 +36,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/rennf93/guard-agent-go"
+	"github.com/rennf93/guard-agent-go/v3"
 )
 
 func main() {

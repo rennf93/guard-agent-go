@@ -12,4 +12,4 @@ package guardagent
 // Version is the semantic version of the guard-agent-go module. It is
 // reported to the ingestion API as agent_version and in the User-Agent
 // header. Releases are published as v-prefixed git tags.
-const Version = "0.1.0"
+const Version = "3.0.2"

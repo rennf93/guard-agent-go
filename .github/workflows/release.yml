@@ -96,7 +96,7 @@ jobs:
 
       - name: Verify module tag resolves
         env:
-          MODULE: github.com/rennf93/guard-agent-go
+          MODULE: github.com/rennf93/guard-agent-go/v3
           TAG: ${{ github.ref_name }}
         run: |
           cd "$(mktemp -d)"

@@ -1,4 +1,4 @@
-module github.com/rennf93/guard-agent-go
+module github.com/rennf93/guard-agent-go/v3
 
 go 1.25.0
 
