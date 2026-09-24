@@ -2,11 +2,13 @@
 
 Go telemetry agent for the [Guard ecosystem](https://github.com/rennf93/guard-core). Buffers security events, metrics, and agent status locally and ships them to the Guard Core App ingestion API with at-least-once delivery: nothing acknowledged is lost, nothing unacknowledged is forgotten.
 
+Docs: https://rennf93.github.io/guard-agent-go/
+
 The agent contains no detection logic. Guard engines and their adapters produce the telemetry; this library transports it, with the same reliability semantics as the Python [guard-agent](https://github.com/rennf93/guard-agent) and its [Rust sibling](https://github.com/rennf93/guard-agent-rs).
 
 ## Status
 
-Implemented and functional. Version `0.1.0` semantics are complete and covered by the test suite. There is no release tag yet, so pin a commit (or track `main`) until the first tag is published; releases will be cut as `v*` git tags.
+Released. Version `v3.0.2` is tagged and published to the Go module proxy; releases are cut as `v*` git tags.
 
 ## Features
 
