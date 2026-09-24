@@ -17,7 +17,7 @@ import (
 	"time"
 
 	guardagent "github.com/rennf93/guard-agent-go/v3"
-	guardcore "github.com/rennf93/guard-core-go/guardcore"
+	guardcore "github.com/rennf93/guard-core-go/v4/guardcore"
 )
 
 func main() {
@@ -28,7 +28,7 @@ func main() {
 		ProjectID:        os.Getenv("GUARD_AGENT_PROJECT_ID"),
 		SigningSecret:    os.Getenv("GUARD_AGENT_SIGNING_SECRET"),
 		GuardVersion:     "example",
-		GuardCoreVersion: "v0.1.0",
+		GuardCoreVersion: "4.0.4",
 	})
 	if err != nil {
 		logger.Fatalf("agent: %v", err)

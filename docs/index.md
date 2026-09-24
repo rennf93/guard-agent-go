@@ -43,7 +43,7 @@ func main() {
 		ProjectID:      os.Getenv("GUARD_AGENT_PROJECT_ID"),
 		SigningSecret:  os.Getenv("GUARD_AGENT_SIGNING_SECRET"),
 		GuardVersion:   "v0.1.0",
-		GuardCoreVersion: "v0.1.0",
+		GuardCoreVersion: "4.0.4",
 	})
 	if err != nil {
 		log.Fatal(err)
